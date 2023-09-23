@@ -47,7 +47,7 @@ function Card({
 	}, [data, genres]);
 
 	const rate = async (filmRating: number) => {
-		await rateFilm({ guestId, movieId, rating: value });
+		await rateFilm({ guestId, movieId, rating: filmRating });
 		dispatch(
 			writeFilm({
 				rate: filmRating,
