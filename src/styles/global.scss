@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "./reset";
+
+body {
+  background-color: gray;
+}
+
+.app {
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #fff;
+  width: 1010px;
+}
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 32px;
+}
+
+@media screen and (max-width: 421px) {
+  .app {
+    width: 420px;
+  }
+
+  .content {
+    padding: 20px 16px;
+  }
+}
+
+a {
+  color: rgba(0, 0, 0, 0.65);
+  &:hover {
+    color: rgba(0, 0, 0, 0.65);
+  }
+}
