@@ -3,11 +3,12 @@ import filmAPI from '../services/filmService';
 import { reducer } from './reducers/rateFilmsSlice';
 
 const store = configureStore({
-  reducer: {
-    rateFilmSlice: reducer,
-    [filmAPI.reducerPath]: filmAPI.reducer,
-  },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(filmAPI.middleware),
+	reducer: {
+		rateFilmSlice: reducer,
+		[filmAPI.reducerPath]: filmAPI.reducer,
+	},
+	middleware: (getDefaultMiddleware) =>
+		getDefaultMiddleware().concat(filmAPI.middleware),
 });
 
 export default store;

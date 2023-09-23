@@ -4,18 +4,18 @@ import FilmsPage from '../pages/FilmsPage/FilmsPage';
 import RatedPage from '../pages/RatedPage/RatedPage';
 
 function Router() {
-  const navigate = useNavigate();
+	const navigate = useNavigate();
 
-  useEffect(() => {
-    navigate('/');
-  }, []);
+	useEffect(() => {
+		navigate('/');
+	}, []);
 
-  return (
-    <Routes>
-      <Route path="/" element={<FilmsPage />} />
-      <Route path="/rated" element={<RatedPage />} />
-    </Routes>
-  );
+	return (
+		<Routes>
+			<Route path="/" element={<FilmsPage />} />
+			<Route path="/rated" element={<RatedPage />} />
+		</Routes>
+	);
 }
 
 export default Router;
