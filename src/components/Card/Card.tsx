@@ -60,7 +60,7 @@ function Card({
 				date,
 			})
 		);
-		setValue(value);
+		setValue(filmRating);
 	};
 
 	return (
