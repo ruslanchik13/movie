@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Input, Pagination } from 'antd';
+import { debounce } from 'lodash';
 import CardList from '../../components/CardList/CardList';
 import classes from './FilmsPage.module.scss';
 import filmAPI from '../../services/filmService';
@@ -15,8 +16,7 @@ function FilmsPage() {
 			<Input
 				className={classes.input}
 				placeholder="Type to search..."
-				value={value}
-				onChange={(e) => setValue(e.target.value)}
+				onChange={debounce((e) => setValue(e.target.value), 300)}
 			/>
 			<CardList
 				guestId={guest ? guest.guest_session_id : ''}
